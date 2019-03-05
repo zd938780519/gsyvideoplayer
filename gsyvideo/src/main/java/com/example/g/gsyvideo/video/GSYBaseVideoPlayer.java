@@ -1,5 +1,6 @@
 package com.example.g.gsyvideo.video;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -348,6 +349,7 @@ public abstract class GSYBaseVideoPlayer extends FrameLayout implements GSYMedia
                 frameLayout.addView(gsyVideoPlayer, lp);
                 vp.addView(frameLayout, lpParent);
                 mHandler.postDelayed(new Runnable() {
+                    @SuppressLint("NewApi")
                     @Override
                     public void run() {
                         TransitionManager.beginDelayedTransition(vp);
@@ -469,6 +471,7 @@ public abstract class GSYBaseVideoPlayer extends FrameLayout implements GSYMedia
     /**
      * 回到正常效果
      */
+    @SuppressLint("NewApi")
     @SuppressWarnings("ResourceType")
     private void backToNormal() {
 
